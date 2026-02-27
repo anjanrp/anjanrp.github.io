@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio of Anjan Ranga Prasad — Data Science (Healthcare AI, NLP, Graph ML)" />
+  <title>Anjan Ranga Prasad | Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0c10; --panel:#12141b; --text:#e7e9ee; --muted:#aab1c2; --line:rgba(255,255,255,.12);
+      --accent:#6ee7ff; --r:18px; --max:1040px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 10% 0%, rgba(110,231,255,.12), transparent 55%),
+        radial-gradient(1000px 700px at 90% 0%, rgba(167,139,250,.10), transparent 55%),
+        var(--bg);
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(var(--max), calc(100% - 40px)); margin:0 auto}
+    header{
+      position:sticky; top:0; z-index:10;
+      background: rgba(11,12,16,.75); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{font-weight:800; color:var(--text); letter-spacing:.2px}
+    .links{display:flex; gap:16px; align-items:center}
+    .links a{color:var(--muted)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:999px;
+      border:1px solid rgba(110,231,255,.35);
+      background: linear-gradient(180deg, rgba(110,231,255,.22), rgba(110,231,255,.10));
+      color:var(--text);
+    }
+    .btn.ghost{background:transparent; border:1px solid var(--line)}
+    .hero{padding:52px 0 18px}
+    .hero-grid{display:grid; grid-template-columns: 1.4fr .9fr; gap:18px; align-items:stretch}
+    .kicker{color:var(--muted); margin:0 0 10px}
+    h1{margin:0 0 12px; font-size:42px; line-height:1.08; letter-spacing:-.5px}
+    .sub{margin:0 0 18px; color:var(--muted); line-height:1.6}
+    .cta{display:flex; gap:12px; flex-wrap:wrap}
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: var(--r);
+      padding:18px;
+    }
+    .avatar{
+      width:92px; height:92px; border-radius:22px;
+      background: linear-gradient(135deg, rgba(110,231,255,.35), rgba(167,139,250,.30));
+      border:1px solid var(--line);
+    }
+    .muted{color:var(--muted)}
+    section{padding:44px 0}
+    .section-head h2{margin:0 0 6px; font-size:28px}
+    .grid{display:grid; grid-template-columns: repeat(3,1fr); gap:16px}
+    .project h3{margin:0 0 8px; font-size:18px}
+    .project ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.55}
+    .tags{margin-top:12px; display:flex; gap:8px; flex-wrap:wrap}
+    .tags span{font-size:12px; color:var(--muted); border:1px solid var(--line); padding:6px 10px; border-radius:999px}
+    footer{padding:26px 0 40px; border-top:1px solid var(--line); color:var(--muted)}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">Anjan</a>
+      <nav class="links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container hero">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">M.S. Data Science @ ASU • Healthcare AI / NLP / Graph ML</p>
+          <h1>Building reproducible, evaluation-first ML systems for real-world impact.</h1>
+          <p class="sub">
+            I like end-to-end work: data → modeling → evaluation → review-ready outputs (metrics, error analysis, clear docs).
+            This site is a quick overview of my projects and interests for job applications.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn ghost" href="https://github.com/anjanrp" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/anjan-ranga-prasad/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <p class="muted" style="margin-top:14px">
+            Email: <a href="mailto:your.email@asu.edu">arangapr@asu.edu</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="avatar" aria-hidden="true"></div>
+          <p style="margin:14px 0 6px"><strong>Tempe, AZ</strong></p>
+          <p class="muted" style="margin:0">Open to Summer 2026 Data Science / Analytics internships.</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <p class="muted">Short, recruiter-friendly summaries. Add links to GitHub/demo/report.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card project">
+            <h3>Biomedical RAG (PubMed → FAISS → LLM eval)</h3>
+            <p class="muted">Local RAG pipeline with retrieval evaluation + grounding checks.</p>
+            <ul>
+              <li>FAISS + embeddings, structured eval harness (Recall@K)</li>
+              <li>Versioned runs + schema-stable outputs for reproducibility</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>FAISS</span><span>RAG</span><span>Eval</span></div>
+          </article>
+
+          <article class="card project">
+            <h3>Clinical NER (BC5CDR RoBERTa evaluation)</h3>
+            <p class="muted">Entity-level metrics + targeted error analysis for improvements.</p>
+            <ul>
+              <li>Precision/recall tradeoffs + qualitative failure modes</li>
+              <li>Clear reporting and “next-step” recommendations</li>
+            </ul>
+            <div class="tags"><span>NLP</span><span>RoBERTa</span><span>PyTorch</span></div>
+          </article>
+
+          <article class="card project">
+            <h3>TCGA-BRCA GraphSAGE (multi-omics patient graph)</h3>
+            <p class="muted">Patient similarity graph for subtype prediction (omics → graph ML).</p>
+            <ul>
+              <li>Graph construction + node classification (PyTorch Geometric)</li>
+              <li>Evaluation with splits, metrics, and ablations</li>
+            </ul>
+            <div class="tags"><span>Graph ML</span><span>PyG</span><span>Bioinformatics</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+        </div>
+        <div class="card">
+          <p style="margin-top:0">
+            I'm a Data Science , Analytics and Engineering graduate student at Arizona State University with a B.Tech in Computer Science from PES University. 
+            I enjoy working with raw, unstructured data and turning it into clear insights that help make better decisions, especially in healthcare. 
+          </p>
+          <p class="muted" style="margin-bottom:0">
+            Healthcare generates massive amounts of data every day, much of which remains underutilized or unexplored.
+            My experience with developing data pipelines in vision and speech domains, has taught me how to turn raw information into actionable results — skills I now want to apply in healthcare.
+
+            I aspire to become a Healthcare Data Scientist or Analyst, using data to improve patient outcomes, optimize workflows, and support evidence-based decisions. 
+            I’m currently seeking Summer 2026 internships where I can grow, contribute, and help bring meaningful change to healthcare through data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+        </div>
+        <div class="card">
+          <p><strong>Email:</strong> <a href="mailto:your.email@asu.edu">arangapr@asu.edu</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/<your-username>" target="_blank" rel="noopener">github.com/&lt;anjanrp&gt;</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/<your-handle>/" target="_blank" rel="noopener">linkedin.com/in/anjan-ranga-prasad/&lt;your-handle&gt;</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        © <span id="y"></span> Anjan Ranga Prasad • Hosted on GitHub Pages
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
