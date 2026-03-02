@@ -96,11 +96,12 @@
           </p>
           <div class="cta">
             <a class="btn" href="#projects">View projects</a>
+            <a class="btn ghost" href="assets/Anjan_Ranga_Prasad_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
             <a class="btn ghost" href="https://github.com/anjanrp" target="_blank" rel="noopener">GitHub</a>
             <a class="btn ghost" href="https://www.linkedin.com/in/anjan-ranga-prasad/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
           <p class="muted" style="margin-top:14px">
-            Email: <a href="mailto:your.email@asu.edu">arangapr@asu.edu</a>
+            Email: <a href="mailto:arangapr@asu.edu">arangapr@asu.edu</a>
           </p>
         </div>
 
@@ -112,46 +113,86 @@
       </div>
     </div>
 
-    <section id="projects">
-      <div class="container">
-        <div class="section-head">
-          <h2>Featured Projects</h2>
-          <p class="muted">Short, recruiter-friendly summaries. Add links to GitHub/demo/report.</p>
+  <section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <h2>Featured Projects</h2>
+      <p class="muted">Short, recruiter-friendly summaries with outcomes + links.</p>
+    </div>
+
+    <div class="grid">
+      <!-- 1) BioLLM / Biomedical RAG -->
+      <article class="card project">
+        <h3>BioLLM — Biomedical RAG (PubMed → FAISS → LLM eval)</h3>
+        <p class="muted">Built a local RAG pipeline with retrieval evaluation + grounding checks.</p>
+        <ul>
+          <li>FAISS + sentence embeddings; structured evaluation harness (Recall@K, citation coverage)</li>
+          <li>Reproducible runs: versioned configs, schema-stable outputs, clear experiment tracking</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>FAISS</span><span>RAG</span><span>Evaluation</span>
         </div>
+        <p class="muted" style="margin:10px 0 0">
+          <a href="https://github.com/anjanrp/BioLLM" target="_blank" rel="noopener">GitHub</a> •
+          <a href="https://github.com/anjanrp/BioLLM#readme" target="_blank" rel="noopener">Write-up</a>
+        </p>
+      </article>
 
-        <div class="grid">
-          <article class="card project">
-            <h3>Biomedical RAG (PubMed → FAISS → LLM eval)</h3>
-            <p class="muted">Local RAG pipeline with retrieval evaluation + grounding checks.</p>
-            <ul>
-              <li>FAISS + embeddings, structured eval harness (Recall@K)</li>
-              <li>Versioned runs + schema-stable outputs for reproducibility</li>
-            </ul>
-            <div class="tags"><span>Python</span><span>FAISS</span><span>RAG</span><span>Eval</span></div>
-          </article>
-
-          <article class="card project">
-            <h3>Clinical NER (BC5CDR RoBERTa evaluation)</h3>
-            <p class="muted">Entity-level metrics + targeted error analysis for improvements.</p>
-            <ul>
-              <li>Precision/recall tradeoffs + qualitative failure modes</li>
-              <li>Clear reporting and “next-step” recommendations</li>
-            </ul>
-            <div class="tags"><span>NLP</span><span>RoBERTa</span><span>PyTorch</span></div>
-          </article>
-
-          <article class="card project">
-            <h3>TCGA-BRCA GraphSAGE (multi-omics patient graph)</h3>
-            <p class="muted">Patient similarity graph for subtype prediction (omics → graph ML).</p>
-            <ul>
-              <li>Graph construction + node classification (PyTorch Geometric)</li>
-              <li>Evaluation with splits, metrics, and ablations</li>
-            </ul>
-            <div class="tags"><span>Graph ML</span><span>PyG</span><span>Bioinformatics</span></div>
-          </article>
+      <!-- 2) Clinical NER -->
+      <article class="card project">
+        <h3>ClinicalNER — Biomedical NER (BC5CDR / RoBERTa)</h3>
+        <p class="muted">Entity extraction pipeline with structured outputs and detailed error analysis.</p>
+        <ul>
+          <li>Entity-level metrics + failure mode analysis (boundary errors, abbreviations, ambiguity)</li>
+          <li>JSON outputs designed for downstream analysis + evaluation reproducibility</li>
+        </ul>
+        <div class="tags">
+          <span>PyTorch</span><span>NLP</span><span>RoBERTa</span><span>Metrics</span>
         </div>
-      </div>
-    </section>
+        <p class="muted" style="margin:10px 0 0">
+          <a href="https://github.com/anjanrp/clinical-ner-mini" target="_blank" rel="noopener">GitHub</a> •
+          <a href="https://github.com/anjanrp/clinical-ner-mini#readme" target="_blank" rel="noopener">Write-up</a>
+        </p>
+      </article>
+
+      <!-- 3) PCam Histopathology -->
+      <article class="card project">
+        <h3>PCam Histopathology — ResNet-18 Classification + Grad-CAM</h3>
+        <p class="muted">Cancer metastasis detection with interpretability-focused evaluation.</p>
+        <ul>
+          <li>Trained and evaluated CNN baseline; tracked accuracy/AUC and error patterns</li>
+          <li>Grad-CAM visualizations for qualitative review and failure-case analysis</li>
+        </ul>
+        <div class="tags">
+          <span>PyTorch</span><span>Computer Vision</span><span>Grad-CAM</span><span>AUC</span>
+        </div>
+        <p class="muted" style="margin:10px 0 0">
+          <a href="https://github.com/anjanrp/wsi-time-pipeline" target="_blank" rel="noopener">GitHub</a> •
+          <a href="https://github.com/anjanrp/wsi-time-pipeline#readme" target="_blank" rel="noopener">Write-up</a>
+        </p>
+      </article>
+
+      <!-- 4) scRNA-seq / Scanpy PBMC -->
+      <article class="card project">
+        <h3>scRNA-seq PBMC — Scanpy QC + Clustering</h3>
+        <p class="muted">Single-cell preprocessing, QC, clustering, and marker exploration.</p>
+        <ul>
+          <li>End-to-end Scanpy workflow: filtering, normalization, PCA/UMAP, clustering</li>
+          <li>Clear notebook/report outputs for reproducibility and review</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>Scanpy</span><span>Single-cell</span><span>UMAP</span>
+        </div>
+        <p class="muted" style="margin:10px 0 0">
+          <a href="https://github.com/anjanrp/scRNA_pbmc_scanpy" target="_blank" rel="noopener">GitHub</a> •
+          <a href="https://github.com/anjanrp/scRNA_pbmc_scanpy#readme" target="_blank" rel="noopener">Write-up</a>
+        </p>
+      </article>
+
+      <!-- 5) Add your 5th project here (placeholder for now) -->
+    </div>
+  </div>
+</section>
 
     <section id="about">
       <div class="container">
@@ -160,12 +201,12 @@
         </div>
         <div class="card">
           <p style="margin-top:0">
-            I'm a Data Science , Analytics and Engineering graduate student at Arizona State University with a B.Tech in Computer Science from PES University. 
+            I'm a Data Science, Analytics and Engineering graduate student at Arizona State University with a B.Tech in Computer Science from PES University. 
             I enjoy working with raw, unstructured data and turning it into clear insights that help make better decisions, especially in healthcare. 
           </p>
           <p class="muted" style="margin-bottom:0">
             Healthcare generates massive amounts of data every day, much of which remains underutilized or unexplored.
-            My experience with developing data pipelines in vision and speech domains, has taught me how to turn raw information into actionable results — skills I now want to apply in healthcare.
+            My experience with developing data pipelines in vision and speech domains has taught me how to turn raw information into actionable results — skills I now want to apply in healthcare.
 
             I aspire to become a Healthcare Data Scientist or Analyst, using data to improve patient outcomes, optimize workflows, and support evidence-based decisions. 
             I’m currently seeking Summer 2026 internships where I can grow, contribute, and help bring meaningful change to healthcare through data.
@@ -180,9 +221,9 @@
           <h2>Contact</h2>
         </div>
         <div class="card">
-          <p><strong>Email:</strong> <a href="mailto:your.email@asu.edu">arangapr@asu.edu</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/<your-username>" target="_blank" rel="noopener">github.com/&lt;anjanrp&gt;</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/<your-handle>/" target="_blank" rel="noopener">linkedin.com/in/anjan-ranga-prasad/&lt;your-handle&gt;</a></p>
+          <p><strong>Email:</strong> <a href="mailto:arangapr@asu.edu">arangapr@asu.edu</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/anjanrp" target="_blank" rel="noopener">github.com/anjanrp</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anjan-ranga-prasad/" target="_blank" rel="noopener">linkedin.com/in/anjan-ranga-prasad</a></p>
         </div>
       </div>
     </section>
